@@ -12,6 +12,13 @@
 		457048C51DD2447300C4C576 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457048C31DD2447300C4C576 /* Main.storyboard */; };
 		457048C71DD2447300C4C576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457048C61DD2447300C4C576 /* Assets.xcassets */; };
 		457048CA1DD2447300C4C576 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457048C81DD2447300C4C576 /* LaunchScreen.storyboard */; };
+		457048D21DD2496A00C4C576 /* HighestScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457048D11DD2496A00C4C576 /* HighestScoreViewController.swift */; };
+		457048D41DD2497800C4C576 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457048D31DD2497800C4C576 /* HelpViewController.swift */; };
+		457048D61DD2498600C4C576 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457048D51DD2498600C4C576 /* StartGameViewController.swift */; };
+		457048D81DD2499800C4C576 /* DifficultyLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457048D71DD2499800C4C576 /* DifficultyLevelViewController.swift */; };
+		457048DA1DD249A600C4C576 /* EasyGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457048D91DD249A600C4C576 /* EasyGameViewController.swift */; };
+		457048DC1DD249B400C4C576 /* MediumGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457048DB1DD249B400C4C576 /* MediumGameViewController.swift */; };
+		457048DE1DD249C200C4C576 /* HardGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457048DD1DD249C200C4C576 /* HardGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		457048C61DD2447300C4C576 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		457048C91DD2447300C4C576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		457048CB1DD2447300C4C576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		457048D11DD2496A00C4C576 /* HighestScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighestScoreViewController.swift; sourceTree = "<group>"; };
+		457048D31DD2497800C4C576 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		457048D51DD2498600C4C576 /* StartGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
+		457048D71DD2499800C4C576 /* DifficultyLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifficultyLevelViewController.swift; sourceTree = "<group>"; };
+		457048D91DD249A600C4C576 /* EasyGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyGameViewController.swift; sourceTree = "<group>"; };
+		457048DB1DD249B400C4C576 /* MediumGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumGameViewController.swift; sourceTree = "<group>"; };
+		457048DD1DD249C200C4C576 /* HardGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HardGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,13 @@
 				457048C61DD2447300C4C576 /* Assets.xcassets */,
 				457048C81DD2447300C4C576 /* LaunchScreen.storyboard */,
 				457048CB1DD2447300C4C576 /* Info.plist */,
+				457048D11DD2496A00C4C576 /* HighestScoreViewController.swift */,
+				457048D31DD2497800C4C576 /* HelpViewController.swift */,
+				457048D51DD2498600C4C576 /* StartGameViewController.swift */,
+				457048D71DD2499800C4C576 /* DifficultyLevelViewController.swift */,
+				457048D91DD249A600C4C576 /* EasyGameViewController.swift */,
+				457048DB1DD249B400C4C576 /* MediumGameViewController.swift */,
+				457048DD1DD249C200C4C576 /* HardGameViewController.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -136,7 +157,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				457048C21DD2447300C4C576 /* ViewController.swift in Sources */,
+				457048D21DD2496A00C4C576 /* HighestScoreViewController.swift in Sources */,
+				457048D81DD2499800C4C576 /* DifficultyLevelViewController.swift in Sources */,
+				457048DC1DD249B400C4C576 /* MediumGameViewController.swift in Sources */,
 				457048C01DD2447300C4C576 /* AppDelegate.swift in Sources */,
+				457048DA1DD249A600C4C576 /* EasyGameViewController.swift in Sources */,
+				457048DE1DD249C200C4C576 /* HardGameViewController.swift in Sources */,
+				457048D61DD2498600C4C576 /* StartGameViewController.swift in Sources */,
+				457048D41DD2497800C4C576 /* HelpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
