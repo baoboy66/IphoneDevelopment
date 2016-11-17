@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3179A6D01DDE28CC00114CF8 /* TappTapp_Fotor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3179A6CF1DDE28CC00114CF8 /* TappTapp_Fotor.jpg */; };
 		457048C01DD2447300C4C576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457048BF1DD2447300C4C576 /* AppDelegate.swift */; };
 		457048C21DD2447300C4C576 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457048C11DD2447300C4C576 /* ViewController.swift */; };
 		457048C51DD2447300C4C576 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457048C31DD2447300C4C576 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3179A6CF1DDE28CC00114CF8 /* TappTapp_Fotor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TappTapp_Fotor.jpg; path = ../../../Downloads/TappTapp_Fotor.jpg; sourceTree = "<group>"; };
 		457048BC1DD2447300C4C576 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		457048BF1DD2447300C4C576 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		457048C11DD2447300C4C576 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				457048C31DD2447300C4C576 /* Main.storyboard */,
 				457048C61DD2447300C4C576 /* Assets.xcassets */,
 				457048C81DD2447300C4C576 /* LaunchScreen.storyboard */,
+				3179A6CF1DDE28CC00114CF8 /* TappTapp_Fotor.jpg */,
 				457048CB1DD2447300C4C576 /* Info.plist */,
 				457048D11DD2496A00C4C576 /* HighestScoreViewController.swift */,
 				457048D31DD2497800C4C576 /* HelpViewController.swift */,
@@ -143,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3179A6D01DDE28CC00114CF8 /* TappTapp_Fotor.jpg in Resources */,
 				457048CA1DD2447300C4C576 /* LaunchScreen.storyboard in Resources */,
 				457048C71DD2447300C4C576 /* Assets.xcassets in Resources */,
 				457048C51DD2447300C4C576 /* Main.storyboard in Resources */,
@@ -312,6 +316,7 @@
 				457048D01DD2447300C4C576 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
