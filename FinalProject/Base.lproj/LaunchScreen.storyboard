@@ -14,25 +14,26 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TappTapp_Fotor.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7jR-fs-2te">
-                                <rect key="frame" x="118" y="170" width="351" height="142"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="A game developed by " borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DF2-Lc-Hka">
-                                <rect key="frame" x="205" y="440" width="143" height="30"/>
+                                <rect key="frame" x="136" y="482" width="143" height="30"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bao Do, Mitchell Milum. Katie Pyle" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sJF-On-cmz">
-                                <rect key="frame" x="151" y="510" width="250" height="30"/>
+                                <rect key="frame" x="82" y="548" width="250" height="30"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TappTapp_Fotor.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7jR-fs-2te">
+                                <rect key="frame" x="57" y="247" width="301" height="132"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
