@@ -39,11 +39,6 @@ class EasyGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
-        
-        }
-        // Do any additional setup after loading the view.
-
         // load the images
         
         Image1.userInteractionEnabled = true

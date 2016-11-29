@@ -142,6 +142,7 @@
                     <navigationItem key="navigationItem" id="mgZ-5W-KQp"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="Image1" destination="7ai-jo-e8a" id="mjb-Mp-CM5"/>
                         <outlet property="lblForCount" destination="8dD-N5-DWP" id="HOB-dv-cUF"/>
                         <outlet property="startOutlet" destination="ILx-NE-Zgy" id="qRi-5r-vwU"/>
                     </connections>
