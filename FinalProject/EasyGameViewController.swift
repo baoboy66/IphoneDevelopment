@@ -20,12 +20,15 @@ class EasyGameViewController: UIViewController {
     @IBOutlet weak var object1: UIImageView!
     
     @IBOutlet var startOutlet: UIButton!
+    
     @IBAction func funcstart(sender: AnyObject) {
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector(counter()), userInfo: nil, repeats: true)
+       //timer =  NSTimer(timeInterval: 1, target: self, selector: Selector(counter:), userInfo: nil, repeats: true)
+      //  timer = 
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "counter:" , userInfo: nil, repeats: true)
     }
-    func counter()
+    func counter(timer:NSTimer)
     {
-        seconds = 1
+        seconds -= 1
         lblForCount.text = String(seconds)
         if (seconds == 0)
         {
