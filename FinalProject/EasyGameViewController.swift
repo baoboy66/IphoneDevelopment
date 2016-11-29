@@ -10,15 +10,29 @@ import UIKit
 
 class EasyGameViewController: UIViewController {
 
-    var images : NSArray!
+    @IBOutlet var lblForCount: UILabel!
+    var seconds = 60
+    var timer = NSTimer()
     
     @IBOutlet weak var Image1: UIImageView!
     var location = CGPoint(x:0, y:0)
     
     @IBOutlet weak var object1: UIImageView!
     
+    @IBOutlet var startOutlet: UIButton!
+    @IBAction func funcstart(sender: AnyObject) {
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector(counter()), userInfo: nil, repeats: true)
+    }
+    func counter()
+    {
+        seconds = 1
+        lblForCount.text = String(seconds)
+        if (seconds == 0)
+        {
+            timer.invalidate()
+        }
+    }
     
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         
