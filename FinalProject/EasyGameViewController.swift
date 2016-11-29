@@ -18,11 +18,11 @@ class EasyGameViewController: UIViewController {
     
     @IBOutlet var startOutlet: UIButton!
     @IBAction func funcstart(sender: AnyObject) {
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector(counter()), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector(counter()), userInfo: nil, repeats: true)
     }
     func counter()
     {
-        seconds -= 1
+        seconds = 1
         lblForCount.text = String(seconds)
         if (seconds == 0)
         {
