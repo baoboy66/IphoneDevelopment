@@ -11,14 +11,31 @@ import UIKit
 class EasyGameViewController: UIViewController {
 
     @IBOutlet var lblForCount: UILabel!
-    var timer = 60
+  var seconds = 60
+    var timer = NSTimer()
     
     
+    
+    @IBOutlet var startOutlet: UIButton!
+    @IBAction func funcstart(sender: AnyObject) {
+         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: <#T##Selector#>, userInfo: nil, repeats: true)
+    }
+    func counter()
+    {
+        seconds -= 1
+        lblForCount.text = String(seconds)
+        if (seconds == 0)
+        {
+            timer.invalidate()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
- var clock = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "countdown", userInfo: nil, repeats: true)
+        
+      
+        
+        }
         // Do any additional setup after loading the view.
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
