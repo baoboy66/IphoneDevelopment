@@ -51,8 +51,9 @@ class EasyGameViewController: UIViewController {
     @IBAction func funcstart(sender: AnyObject) {
        //timer =  NSTimer(timeInterval: 1, target: self, selector: Selector(counter:), userInfo: nil, repeats: true)
       //  timer = 
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "counter:", userInfo: nil, repeats: true)
 
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(EasyGameViewController.counter(_:)) , userInfo: nil, repeats: true)
+        //NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(EasyGameViewController.counter(_:)) , userInfo: nil, repeats: true)
     }
     func counter(timer:NSTimer)
     {
@@ -71,7 +72,7 @@ class EasyGameViewController: UIViewController {
         // load the images
         
         Image1.userInteractionEnabled = true
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(EasyGameViewController.ImageTapped(_:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: Selector("ImageTapped:"))
         
         self.Image1.addGestureRecognizer(tapGesture)
     }
