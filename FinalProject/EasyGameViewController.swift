@@ -11,6 +11,7 @@ import UIKit
 class EasyGameViewController: UIViewController {
 
     @IBAction func MoveBug(sender: UIButton) {
+        
         // Find the button's width and height
         let buttonWidth = sender.frame.width
         let buttonHeight = sender.frame.height
@@ -30,11 +31,18 @@ class EasyGameViewController: UIViewController {
         // offset the button's center by the random offset
         sender.center.x = xoffset + buttonWidth/2
         sender.center.y = yoffset + buttonHeight/2 + (self.navigationController?.navigationBar.frame.height)!
+        
+        
+        score += 1
+        //updateScore()
     }
     
+    @IBOutlet weak var scorelbl: UILabel!
     @IBOutlet var lblForCount: UILabel!
     var seconds = 60
     var timer = NSTimer()
+    
+    var score = 0
     
     @IBOutlet weak var Image1: UIImageView!
     
@@ -49,10 +57,11 @@ class EasyGameViewController: UIViewController {
     func counter(timer:NSTimer)
     {
         seconds -= 1
-        lblForCount.text = String(seconds)
+        //scorelbl.text = String(score)
         if (seconds == 0)
         {
             timer.invalidate()
+            updateStat()
         }
     }
 
@@ -68,9 +77,12 @@ class EasyGameViewController: UIViewController {
     }
 
     func ImageTapped(tapGesture: UITapGestureRecognizer) {
-        
+
         Image1.backgroundColor = UIColor.blueColor()
         randomPosition()
+        
+        score += 1
+        //updateScore()
     }
     
     func randomPosition() {
@@ -96,6 +108,33 @@ class EasyGameViewController: UIViewController {
         Image1.center.y = yoffset + buttonHeight/2 + (self.navigationController?.navigationBar.frame.height)!
     }
     
+    func updateScore(){
+        scorelbl.text = String(score)
+    }
+    
+    func updateStat(){
+        // get reference to the user default object
+        let shareObject = NSUserDefaults.standardUserDefaults()
+        var highestScore = shareObject.integerForKey("HighestScore")
+        var lowestScore = shareObject.integerForKey("LowestScore")
+        var numberOfGames = shareObject.integerForKey("NumberOfGames")
+        
+        //update the stats based on the currect game results
+        let recentScore = score
+        numberOfGames += 1
+        if(highestScore < score){
+            highestScore = score
+        }
+        if(lowestScore > score || numberOfGames == 1){
+            lowestScore = score
+        }
+        // save the stats back to the user defaults
+        shareObject.setInteger(recentScore, forKey: "RecentScore")
+        shareObject.setInteger(highestScore, forKey: "HighestScore")
+        shareObject.setInteger(lowestScore, forKey: "LowestScore")
+        shareObject.setInteger(numberOfGames, forKey: "NumberOfGames")
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
