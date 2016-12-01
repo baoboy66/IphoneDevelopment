@@ -34,7 +34,7 @@ class EasyGameViewController: UIViewController {
         
         
         score += 1
-        //updateScore()
+        updateScore()
     }
     
     @IBOutlet weak var scorelbl: UILabel!
@@ -58,7 +58,8 @@ class EasyGameViewController: UIViewController {
     func counter(timer:NSTimer)
     {
         seconds -= 1
-        //scorelbl.text = String(score)
+        lblForCount.text = String(seconds)
+        scorelbl.text = String(score)
         if (seconds == 0)
         {
             timer.invalidate()
@@ -70,7 +71,6 @@ class EasyGameViewController: UIViewController {
         super.viewDidLoad()
         
         // load the images
-        
         Image1.userInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: Selector("ImageTapped:"))
         
@@ -83,7 +83,7 @@ class EasyGameViewController: UIViewController {
         randomPosition()
         
         score += 1
-        //updateScore()
+        updateScore()
     }
     
     func randomPosition() {
@@ -140,16 +140,5 @@ class EasyGameViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
