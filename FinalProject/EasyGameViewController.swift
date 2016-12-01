@@ -15,16 +15,13 @@ class EasyGameViewController: UIViewController {
     var timer = NSTimer()
     
     @IBOutlet weak var Image1: UIImageView!
-    var location = CGPoint(x:0, y:0)
-    
-    @IBOutlet weak var object1: UIImageView!
     
     @IBOutlet var startOutlet: UIButton!
     
     @IBAction func funcstart(sender: AnyObject) {
        //timer =  NSTimer(timeInterval: 1, target: self, selector: Selector(counter:), userInfo: nil, repeats: true)
       //  timer = 
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "counter:" , userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(EasyGameViewController.counter(_:)) , userInfo: nil, repeats: true)
     }
     func counter(timer:NSTimer)
     {
@@ -42,12 +39,12 @@ class EasyGameViewController: UIViewController {
         // load the images
         
         Image1.userInteractionEnabled = true
-        let tapGesture = UITapGestureRecognizer(target: self, action: Selector("ImmageTapped:"))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(EasyGameViewController.ImageTapped(_:)))
         
         self.Image1.addGestureRecognizer(tapGesture)
     }
 
-    func ImmageTapped(tapGesture: UITapGestureRecognizer) {
+    func ImageTapped(tapGesture: UITapGestureRecognizer) {
         
         Image1.backgroundColor = UIColor.blueColor()
         Image1.center = CGPointMake(randomPosition().y, randomPosition().y)

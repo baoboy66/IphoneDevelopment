@@ -20,6 +20,7 @@
 		457048DA1DD249A600C4C576 /* EasyGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457048D91DD249A600C4C576 /* EasyGameViewController.swift */; };
 		457048DC1DD249B400C4C576 /* MediumGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457048DB1DD249B400C4C576 /* MediumGameViewController.swift */; };
 		457048DE1DD249C200C4C576 /* HardGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457048DD1DD249C200C4C576 /* HardGameViewController.swift */; };
+		9A71F3F81DEFAFBA0063D93B /* ladybug.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A71F3F71DEFAFBA0063D93B /* ladybug.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		457048D91DD249A600C4C576 /* EasyGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyGameViewController.swift; sourceTree = "<group>"; };
 		457048DB1DD249B400C4C576 /* MediumGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumGameViewController.swift; sourceTree = "<group>"; };
 		457048DD1DD249C200C4C576 /* HardGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HardGameViewController.swift; sourceTree = "<group>"; };
+		9A71F3F71DEFAFBA0063D93B /* ladybug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ladybug.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		457048BE1DD2447300C4C576 /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				9A71F3F71DEFAFBA0063D93B /* ladybug.png */,
 				457048BF1DD2447300C4C576 /* AppDelegate.swift */,
 				457048C11DD2447300C4C576 /* ViewController.swift */,
 				457048C31DD2447300C4C576 /* Main.storyboard */,
@@ -149,6 +152,7 @@
 				3179A6D41DDE2B7100114CF8 /* TappTapp_Fotor.jpg in Resources */,
 				457048CA1DD2447300C4C576 /* LaunchScreen.storyboard in Resources */,
 				457048C71DD2447300C4C576 /* Assets.xcassets in Resources */,
+				9A71F3F81DEFAFBA0063D93B /* ladybug.png in Resources */,
 				457048C51DD2447300C4C576 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
