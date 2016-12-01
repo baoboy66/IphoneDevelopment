@@ -136,6 +136,13 @@
                                 <color key="backgroundColor" red="0.25098040699958801" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEO-n6-KQa">
+                                <rect key="frame" x="184" y="472" width="50" height="50"/>
+                                <state key="normal" title="Button" image="ladybug.png"/>
+                                <connections>
+                                    <action selector="MoveBug:" destination="iZC-Jr-rpP" eventType="touchUpInside" id="SK6-a6-Q0k"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

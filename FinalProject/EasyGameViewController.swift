@@ -10,6 +10,28 @@ import UIKit
 
 class EasyGameViewController: UIViewController {
 
+    @IBAction func MoveBug(sender: UIButton) {
+        // Find the button's width and height
+        let buttonWidth = sender.frame.width
+        let buttonHeight = sender.frame.height
+        
+        //find the width and height of the view
+        let viewWidth = sender.superview!.bounds.width
+        let viewHeight = sender.superview!.bounds.height
+        
+        // Width and height of the area contain lady bug
+        let xwidth = viewWidth - buttonWidth
+        let yheight = viewHeight - buttonHeight - (self.navigationController?.navigationBar.frame.height)!
+        
+        // generate random x and y offset
+        let xoffset = CGFloat(arc4random_uniform(UInt32(floor (xwidth))))
+        let yoffset = CGFloat(arc4random_uniform(UInt32(floor (yheight))))
+        
+        // offset the button's center by the random offset
+        sender.center.x = xoffset + buttonWidth/2
+        sender.center.y = yoffset + buttonHeight/2 + (self.navigationController?.navigationBar.frame.height)!
+    }
+    
     @IBOutlet var lblForCount: UILabel!
     var seconds = 60
     var timer = NSTimer()
@@ -21,6 +43,7 @@ class EasyGameViewController: UIViewController {
     @IBAction func funcstart(sender: AnyObject) {
        //timer =  NSTimer(timeInterval: 1, target: self, selector: Selector(counter:), userInfo: nil, repeats: true)
       //  timer = 
+
         NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(EasyGameViewController.counter(_:)) , userInfo: nil, repeats: true)
     }
     func counter(timer:NSTimer)
@@ -32,7 +55,7 @@ class EasyGameViewController: UIViewController {
             timer.invalidate()
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,45 +70,32 @@ class EasyGameViewController: UIViewController {
     func ImageTapped(tapGesture: UITapGestureRecognizer) {
         
         Image1.backgroundColor = UIColor.blueColor()
-        Image1.center = CGPointMake(randomPosition().y, randomPosition().y)
+        randomPosition()
     }
     
-    func randomPosition() -> CGPoint {
-        let height = self.view!.frame.height
-        let width = self.view!.frame.width
+    func randomPosition() {
         
-        let randomPosition = CGPointMake(CGFloat(arc4random()) % height, CGFloat(arc4random()) % width)
+        // Find the button's width and height
+        let buttonWidth = Image1.frame.width
+        let buttonHeight = Image1.frame.height
         
-        return checkBoundaries(randomPosition)
-
+        //find the width and height of the view
+        let viewWidth = Image1.superview!.bounds.width
+        let viewHeight = Image1.superview!.bounds.height
+        
+        // Width and height of the area contain lady bug
+        let xwidth = viewWidth - buttonWidth
+        let yheight = viewHeight - buttonHeight - (self.navigationController?.navigationBar.frame.height)!
+        
+        // generate random x and y offset
+        let xoffset = CGFloat(arc4random_uniform(UInt32(floor (xwidth))))
+        let yoffset = CGFloat(arc4random_uniform(UInt32(floor (yheight))))
+        
+        // offset the button's center by the random offset
+        Image1.center.x = xoffset + buttonWidth/2
+        Image1.center.y = yoffset + buttonHeight/2 + (self.navigationController?.navigationBar.frame.height)!
     }
     
-    func checkBoundaries(var position: CGPoint) -> CGPoint{
-        let height = self.view!.frame.height
-        let width = self.view!.frame.width
-        let topBound = self.navigationController?.navigationBar.frame.size.height
-        // check left bound
-        if(position.x - Image1.frame.width/2 < 0){
-            position.x = Image1.frame.width/2
-        }
-        
-        // check right bound
-        if(position.x + Image1.frame.width/2 > width){
-            position.x = width - Image1.frame.width/2
-        }
-        
-        // check top bound
-        if(position.y - Image1.frame.height/2  < topBound){
-            position.y = topBound! + Image1.frame.height/2
-        }
-        
-        // check bottom bound
-        if(position.y + Image1.frame.height/2  > height){
-            position.y = height - Image1.frame.height/2
-        }
-        
-        return position
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
