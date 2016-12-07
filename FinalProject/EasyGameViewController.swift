@@ -9,33 +9,6 @@
 import UIKit
 
 class EasyGameViewController: UIViewController {
-
-    @IBAction func MoveBug(sender: UIButton) {
-        
-        // Find the button's width and height
-        let buttonWidth = sender.frame.width
-        let buttonHeight = sender.frame.height
-        
-        //find the width and height of the view
-        let viewWidth = sender.superview!.bounds.width
-        let viewHeight = sender.superview!.bounds.height
-        
-        // Width and height of the area contain lady bug
-        let xwidth = viewWidth - buttonWidth
-        let yheight = viewHeight - buttonHeight - (self.navigationController?.navigationBar.frame.height)!
-        
-        // generate random x and y offset
-        let xoffset = CGFloat(arc4random_uniform(UInt32(floor (xwidth))))
-        let yoffset = CGFloat(arc4random_uniform(UInt32(floor (yheight))))
-        
-        // offset the button's center by the random offset
-        sender.center.x = xoffset + buttonWidth/2
-        sender.center.y = yoffset + buttonHeight/2 + (self.navigationController?.navigationBar.frame.height)!
-        
-        
-        score += 1
-        updateScore()
-    }
     
     @IBOutlet weak var scorelbl: UILabel!
     @IBOutlet var lblForCount: UILabel!
@@ -44,26 +17,27 @@ class EasyGameViewController: UIViewController {
     
     var score = 0
     
+    @IBOutlet weak var Image2: UIImageView!
     @IBOutlet weak var Image1: UIImageView!
     
     @IBOutlet var startOutlet: UIButton!
     
     @IBAction func funcstart(sender: AnyObject) {
-       //timer =  NSTimer(timeInterval: 1, target: self, selector: Selector(counter:), userInfo: nil, repeats: true)
-      //  timer = 
+        reset()
+        // add timer
         NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "counter:", userInfo: nil, repeats: true)
-
-        //NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(EasyGameViewController.counter(_:)) , userInfo: nil, repeats: true)
     }
     func counter(timer:NSTimer)
     {
         seconds -= 1
         lblForCount.text = String(seconds)
         scorelbl.text = String(score)
-        if (seconds == 0)
+        if (seconds <= 0)
         {
             timer.invalidate()
             updateStat()
+            endGame()
+            reset()
         }
     }
 
@@ -72,44 +46,60 @@ class EasyGameViewController: UIViewController {
         
         // load the images
         Image1.userInteractionEnabled = true
+        Image2.userInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: Selector("ImageTapped:"))
+        let tapGesture2 = UITapGestureRecognizer(target: self, action: Selector("ImageTapped2:"))
         
+        
+        self.Image2.addGestureRecognizer(tapGesture2)
         self.Image1.addGestureRecognizer(tapGesture)
     }
 
+    func ImageTapped2(tapGesture: UITapGestureRecognizer) {
+        randomPosition(Image2)
+        updateScore()
+    }
     func ImageTapped(tapGesture: UITapGestureRecognizer) {
-
-        Image1.backgroundColor = UIColor.blueColor()
-        randomPosition()
-        
-        score += 1
+        randomPosition(Image1)
         updateScore()
     }
     
-    func randomPosition() {
+    func endGame(){
+        // display the end game screen
+        let alert = UIAlertController(title: "Game End", message: "Game Over \n Your Score is \(score)", preferredStyle: UIAlertControllerStyle.Alert)
+        let cancelAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil)
+        alert.addAction(cancelAction)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    func reset() {
+        score = 0;
+        seconds = 60;
+    }
+    func randomPosition(image: UIImageView) {
         
         // Find the button's width and height
-        let buttonWidth = Image1.frame.width
-        let buttonHeight = Image1.frame.height
+        let imageWidth = image.frame.width
+        let imageHeight = image.frame.height
         
         //find the width and height of the view
-        let viewWidth = Image1.superview!.bounds.width
-        let viewHeight = Image1.superview!.bounds.height
+        let viewWidth = image.superview!.bounds.width
+        let viewHeight = image.superview!.bounds.height
         
         // Width and height of the area contain lady bug
-        let xwidth = viewWidth - buttonWidth
-        let yheight = viewHeight - buttonHeight - (self.navigationController?.navigationBar.frame.height)!
+        let xwidth = viewWidth - imageWidth
+        let yheight = viewHeight - imageHeight - 150
         
         // generate random x and y offset
         let xoffset = CGFloat(arc4random_uniform(UInt32(floor (xwidth))))
         let yoffset = CGFloat(arc4random_uniform(UInt32(floor (yheight))))
         
-        // offset the button's center by the random offset
-        Image1.center.x = xoffset + buttonWidth/2
-        Image1.center.y = yoffset + buttonHeight/2 + (self.navigationController?.navigationBar.frame.height)!
+        // offset the image's center by the random offset
+        image.center.x = xoffset + imageWidth/2
+        image.center.y = yoffset + imageHeight/2 + 150
     }
     
     func updateScore(){
+        score += 1
         scorelbl.text = String(score)
     }
     
