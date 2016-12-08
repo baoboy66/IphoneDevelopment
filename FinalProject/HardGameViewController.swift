@@ -20,6 +20,7 @@ class HardGameViewController: UIViewController {
     
     @IBAction func funcstart(sender: AnyObject) {
         reset()
+        Image1.alpha = 1;
         // add timer
         NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "counter:", userInfo: nil, repeats: true)
     }
@@ -42,6 +43,7 @@ class HardGameViewController: UIViewController {
         
         // load the images
         Image1.userInteractionEnabled = true
+        Image1.alpha = 0;
         let tapGesture = UITapGestureRecognizer(target: self, action: Selector("ImageTapped:"))
   
         self.Image1.addGestureRecognizer(tapGesture)

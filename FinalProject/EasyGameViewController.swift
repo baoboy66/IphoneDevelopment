@@ -24,6 +24,8 @@ class EasyGameViewController: UIViewController {
     
     @IBAction func funcstart(sender: AnyObject) {
         reset()
+        Image1.alpha = 1;
+        Image2.alpha = 1;
         // add timer
         NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "counter:", userInfo: nil, repeats: true)
     }
@@ -47,6 +49,8 @@ class EasyGameViewController: UIViewController {
         // load the images
         Image1.userInteractionEnabled = true
         Image2.userInteractionEnabled = true
+        Image1.alpha = 0;
+        Image2.alpha = 0;
         let tapGesture = UITapGestureRecognizer(target: self, action: Selector("ImageTapped:"))
         let tapGesture2 = UITapGestureRecognizer(target: self, action: Selector("ImageTapped2:"))
         
@@ -65,6 +69,8 @@ class EasyGameViewController: UIViewController {
     }
     
     func endGame(){
+        Image1.alpha = 0;
+        Image2.alpha = 0;
         // display the end game screen
         let alert = UIAlertController(title: "Game End", message: "Game Over \n Your Score is \(score)", preferredStyle: UIAlertControllerStyle.Alert)
         let cancelAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil)
