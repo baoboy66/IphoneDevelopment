@@ -26,8 +26,8 @@ class HardGameViewController: UIViewController {
     func counter(timer:NSTimer)
     {
         seconds -= 1
-        lblForCount.text = String(seconds)
-        scorelbl.text = String(score)
+        //lblForCount.text = String(seconds)
+        //scorelbl.text = String(score)
         if (seconds <= 0)
         {
             timer.invalidate()
@@ -49,7 +49,8 @@ class HardGameViewController: UIViewController {
 
     func ImageTapped(tapGesture: UITapGestureRecognizer) {
         randomPosition(Image1)
-        updateScore()
+        score += 1
+        //updateScore()
     }
     
     func endGame(){
@@ -89,7 +90,7 @@ class HardGameViewController: UIViewController {
     }
     
     func updateScore(){
-        score += 1
+        
         scorelbl.text = String(score)
     }
     

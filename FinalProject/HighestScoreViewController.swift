@@ -35,15 +35,15 @@ class HighestScoreViewController: UIViewController {
         let recentScore = shareObject.integerForKey("RecentScore")
         let numberOfGames = shareObject.integerForKey("NumberOfGames")
         
-        let mhighestScore = shareObject.integerForKey("HighestScore")
-        let mlowestScore = shareObject.integerForKey("LowestScore")
-        let mrecentScore = shareObject.integerForKey("RecentScore")
-        let mnumberOfGames = shareObject.integerForKey("NumberOfGames")
+        let mhighestScore = shareObject.integerForKey("mHighestScore")
+        let mlowestScore = shareObject.integerForKey("mLowestScore")
+        let mrecentScore = shareObject.integerForKey("mRecentScore")
+        let mnumberOfGames = shareObject.integerForKey("mNumberOfGames")
         
-        let hhighestScore = shareObject.integerForKey("HighestScore")
-        let hlowestScore = shareObject.integerForKey("LowestScore")
-        let hrecentScore = shareObject.integerForKey("RecentScore")
-        let hnumberOfGames = shareObject.integerForKey("NumberOfGames")
+        let hhighestScore = shareObject.integerForKey("hHighestScore")
+        let hlowestScore = shareObject.integerForKey("hLowestScore")
+        let hrecentScore = shareObject.integerForKey("hRecentScore")
+        let hnumberOfGames = shareObject.integerForKey("hNumberOfGames")
         
         // assign the values to the labels
         lblhigh.text = "Highest Score: \(highestScore)"
