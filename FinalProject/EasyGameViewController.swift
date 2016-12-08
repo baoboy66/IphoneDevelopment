@@ -74,6 +74,8 @@ class EasyGameViewController: UIViewController {
     func reset() {
         score = 0;
         seconds = 60;
+        lblForCount.text = String(seconds)
+        scorelbl.text = String(score)
     }
     func randomPosition(image: UIImageView) {
         

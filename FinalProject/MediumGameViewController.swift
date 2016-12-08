@@ -70,6 +70,8 @@ class MediumGameViewController: UIViewController {
     func reset() {
         score = 0;
         seconds = 30;
+        lblForCount.text = String(seconds)
+        scorelbl.text = String(score)
     }
     func randomPosition(image: UIImageView) {
         
@@ -102,9 +104,9 @@ class MediumGameViewController: UIViewController {
     func updateStat(){
         // get reference to the user default object
         let shareObject = NSUserDefaults.standardUserDefaults()
-        var highestScore = shareObject.integerForKey("HighestScore")
-        var lowestScore = shareObject.integerForKey("LowestScore")
-        var numberOfGames = shareObject.integerForKey("NumberOfGames")
+        var highestScore = shareObject.integerForKey("mHighestScore")
+        var lowestScore = shareObject.integerForKey("mLowestScore")
+        var numberOfGames = shareObject.integerForKey("mNumberOfGames")
         
         //update the stats based on the currect game results
         let recentScore = score
@@ -116,10 +118,10 @@ class MediumGameViewController: UIViewController {
             lowestScore = score
         }
         // save the stats back to the user defaults
-        shareObject.setInteger(recentScore, forKey: "RecentScore")
-        shareObject.setInteger(highestScore, forKey: "HighestScore")
-        shareObject.setInteger(lowestScore, forKey: "LowestScore")
-        shareObject.setInteger(numberOfGames, forKey: "NumberOfGames")
+        shareObject.setInteger(recentScore, forKey: "mRecentScore")
+        shareObject.setInteger(highestScore, forKey: "mHighestScore")
+        shareObject.setInteger(lowestScore, forKey: "mLowestScore")
+        shareObject.setInteger(numberOfGames, forKey: "mNumberOfGames")
         
     }
     override func didReceiveMemoryWarning() {
