@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GYA-IK-Qey">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Do_MusicLearning" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdP-Px-Aa5">
+                                <rect key="frame" x="168" y="131" width="78" height="30"/>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleColor" red="0.15331016431557909" green="0.25155412079428019" blue="0.7459134615384615" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ae-5R-Wbi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iae-dQ-2lD">
+                                <rect key="frame" x="63" y="182" width="46" height="30"/>
+                                <state key="normal" title="A"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="aVW-5k-0xI"/>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X1Z-0p-esB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOm-Ph-tjH">
+                                <rect key="frame" x="140" y="182" width="46" height="30"/>
+                                <state key="normal" title="A#"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="oeW-2V-Fo7"/>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XAP-ok-OjA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAY-sQ-Me2">
+                                <rect key="frame" x="226" y="182" width="46" height="30"/>
+                                <state key="normal" title="B"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="Emq-tE-EcC"/>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yjg-Iy-fbR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xe-dE-nHC">
+                                <rect key="frame" x="305" y="182" width="46" height="30"/>
+                                <state key="normal" title="C"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="BvR-Nb-WLO"/>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="clI-ui-Oja"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ML5-Z4-p4N">
+                                <rect key="frame" x="63" y="238" width="46" height="30"/>
+                                <state key="normal" title="C#"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="WlL-Yl-LZC"/>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VnM-Gr-iF1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sK9-GD-3SK">
+                                <rect key="frame" x="140" y="238" width="46" height="30"/>
+                                <state key="normal" title="D"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="H7m-vp-j2T"/>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="81R-zb-cJN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eK7-dZ-NqO">
+                                <rect key="frame" x="140" y="286" width="46" height="30"/>
+                                <state key="normal" title="F#"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="9d3-V8-5aH"/>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vDn-Hf-Mwj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcf-Zp-GS3">
+                                <rect key="frame" x="305" y="238" width="46" height="30"/>
+                                <state key="normal" title="E"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="HGN-qt-iug"/>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hn2-hS-bhQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMr-7s-N86">
+                                <rect key="frame" x="226" y="238" width="46" height="30"/>
+                                <state key="normal" title="D#"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="soT-NV-JB9"/>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w7g-Q5-ujS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTo-FV-0p2">
+                                <rect key="frame" x="63" y="286" width="46" height="30"/>
+                                <state key="normal" title="F"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="ptj-se-1wl"/>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GD6-1E-Dac"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLP-VV-wdR">
+                                <rect key="frame" x="305" y="286" width="46" height="30"/>
+                                <state key="normal" title="G#"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="nZE-3J-hih"/>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5kc-73-7wM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnP-VE-sXd">
+                                <rect key="frame" x="226" y="286" width="46" height="30"/>
+                                <state key="normal" title="G"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="5Ob-oD-edh"/>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rEI-IR-Zn1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDb-IX-dzJ">
+                                <rect key="frame" x="77" y="577" width="264" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="correct.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="1gP-0P-i3t">
+                                <rect key="frame" x="133" y="403" width="153" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="incorrect.png" translatesAutoresizingMaskIntoConstraints="NO" id="8hg-LJ-9m1">
+                                <rect key="frame" x="133" y="403" width="153" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUy-lw-qBt">
+                                <rect key="frame" x="128" y="355" width="158" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uKA-Za-70j">
+                        <barButtonItem key="leftBarButtonItem" title="Help" id="xty-B3-wai">
+                            <connections>
+                                <segue destination="ykq-Yj-oHs" kind="push" identifier="HelpSegue" id="A0N-S5-WoD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Stats" id="tId-bt-jkh">
+                            <connections>
+                                <segue destination="r5x-lj-73j" kind="push" identifier="StatsSegue" id="fac-ia-3De"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="btnStart" destination="pdP-Px-Aa5" id="Bwr-7Q-Kid"/>
+                        <outlet property="correctAnswer" destination="1gP-0P-i3t" id="LY7-nM-3nK"/>
+                        <outlet property="incorrectAnswer" destination="8hg-LJ-9m1" id="KF8-eI-Xkv"/>
+                        <outlet property="lblAnswer" destination="tUy-lw-qBt" id="1qs-RD-MBM"/>
+                        <outlet property="lblTurn" destination="XDb-IX-dzJ" id="70d-1u-a4S"/>
+                        <outletCollection property="noteButtonsCollection" destination="iae-dQ-2lD" collectionClass="NSMutableArray" id="2am-qy-HXR"/>
+                        <outletCollection property="noteButtonsCollection" destination="aOm-Ph-tjH" collectionClass="NSMutableArray" id="9iA-gY-au1"/>
+                        <outletCollection property="noteButtonsCollection" destination="XAY-sQ-Me2" collectionClass="NSMutableArray" id="msC-23-tQm"/>
+                        <outletCollection property="noteButtonsCollection" destination="xMr-7s-N86" collectionClass="NSMutableArray" id="uqE-FV-7ZA"/>
+                        <outletCollection property="noteButtonsCollection" destination="SnP-VE-sXd" collectionClass="NSMutableArray" id="UTN-BU-HdO"/>
+                        <outletCollection property="noteButtonsCollection" destination="eK7-dZ-NqO" collectionClass="NSMutableArray" id="pbK-gj-QiD"/>
+                        <outletCollection property="noteButtonsCollection" destination="sK9-GD-3SK" collectionClass="NSMutableArray" id="bZw-z7-rvu"/>
+                        <outletCollection property="noteButtonsCollection" destination="ML5-Z4-p4N" collectionClass="NSMutableArray" id="Pjs-9G-bt7"/>
+                        <outletCollection property="noteButtonsCollection" destination="tTo-FV-0p2" collectionClass="NSMutableArray" id="7lY-9m-Yzg"/>
+                        <outletCollection property="noteButtonsCollection" destination="5xe-dE-nHC" collectionClass="NSMutableArray" id="g30-e7-TEj"/>
+                        <outletCollection property="noteButtonsCollection" destination="Kcf-Zp-GS3" collectionClass="NSMutableArray" id="BpV-jB-nH8"/>
+                        <outletCollection property="noteButtonsCollection" destination="xLP-VV-wdR" collectionClass="NSMutableArray" id="85T-aW-qWb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344" y="289"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="vQN-C4-HCu">
+            <objects>
+                <viewController id="ykq-Yj-oHs" customClass="HelpViewController" customModule="Do_MusicLearning" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wqN-EG-UlA"/>
+                        <viewControllerLayoutGuide type="bottom" id="xCT-f4-b9G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x9F-wH-PaB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvF-0H-adc">
+                                <rect key="frame" x="20" y="105" width="374" height="234"/>
+                                <string key="text">The game has 3 turns.  Click the start Game button to start.  You will hear a sound, click the button that corresponds to the note that you heard. Get it all right and you win. Make sure to practice here in the help section. To view stats, click on the stats section.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gnj-db-HOg">
+                                <rect key="frame" x="28" y="378" width="46" height="30"/>
+                                <state key="normal" title="A"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="cp2-ZD-bqB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFe-z1-jQF">
+                                <rect key="frame" x="105" y="378" width="46" height="30"/>
+                                <state key="normal" title="A#"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="6GE-1H-THu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPC-HE-D0r">
+                                <rect key="frame" x="191" y="378" width="46" height="30"/>
+                                <state key="normal" title="B"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="A7D-zV-RUt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTA-fF-3o4">
+                                <rect key="frame" x="270" y="378" width="46" height="30"/>
+                                <state key="normal" title="C"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="Gxa-bu-mc6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lO-tz-eZ0">
+                                <rect key="frame" x="28" y="434" width="46" height="30"/>
+                                <state key="normal" title="C#"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="0ph-YE-qAL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ll1-rW-Mth">
+                                <rect key="frame" x="105" y="434" width="46" height="30"/>
+                                <state key="normal" title="D"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="RWE-Rq-aQb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NP-L9-3Gz">
+                                <rect key="frame" x="105" y="482" width="46" height="30"/>
+                                <state key="normal" title="F#"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="aNw-mL-5kK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUD-Li-QAx">
+                                <rect key="frame" x="270" y="434" width="46" height="30"/>
+                                <state key="normal" title="E"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="22h-Hr-57Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C75-5D-Fxl">
+                                <rect key="frame" x="191" y="434" width="46" height="30"/>
+                                <state key="normal" title="D#"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="WMd-mb-XHh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuo-92-Vrf">
+                                <rect key="frame" x="28" y="482" width="46" height="30"/>
+                                <state key="normal" title="F"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="ygh-zS-79j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMv-BR-2Ri">
+                                <rect key="frame" x="270" y="482" width="46" height="30"/>
+                                <state key="normal" title="G#"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="6rj-uk-aat"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tht-ud-RKC">
+                                <rect key="frame" x="191" y="482" width="46" height="30"/>
+                                <state key="normal" title="G"/>
+                                <connections>
+                                    <action selector="PlayNote:" destination="ykq-Yj-oHs" eventType="touchUpInside" id="ASP-Ab-r7T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6dX-je-Ukq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13i-Fw-rxW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="899" y="-89"/>
+        </scene>
+        <!--Stats View Controller-->
+        <scene sceneID="MhQ-PE-Nid">
+            <objects>
+                <viewController id="r5x-lj-73j" customClass="StatsViewController" customModule="Do_MusicLearning" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gb3-bx-K9Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="wTL-og-eMs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1RB-qn-gLG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuC-Sw-pti">
+                                <rect key="frame" x="120" y="131" width="189" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydu-dF-vaB">
+                                <rect key="frame" x="120" y="183" width="189" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xx-dl-cbW">
+                                <rect key="frame" x="120" y="234" width="189" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utm-8h-3GS">
+                                <rect key="frame" x="120" y="289" width="189" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="T73-kH-7Ec"/>
+                    <connections>
+                        <outlet property="lblHighestScore" destination="TuC-Sw-pti" id="S7g-gq-zhP"/>
+                        <outlet property="lblLowestScore" destination="Ydu-dF-vaB" id="c5X-7g-5Gl"/>
+                        <outlet property="lblNumberOfGames" destination="Utm-8h-3GS" id="V2y-gT-eJk"/>
+                        <outlet property="lblRecentScore" destination="0xx-dl-cbW" id="j4e-sD-qM3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j2w-Bt-9m2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="899" y="747"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fyo-qO-XDb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GYA-IK-Qey" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j83-g3-i8m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="612-K9-wOI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5F-Mh-YZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210" y="229"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="correct.jpeg" width="237" height="213"/>
+        <image name="incorrect.png" width="225" height="225"/>
+    </resources>
+</document>
